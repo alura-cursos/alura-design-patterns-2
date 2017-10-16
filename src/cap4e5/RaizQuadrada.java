@@ -1,4 +1,4 @@
-package cap4;
+package cap4e5;
 
 public class RaizQuadrada implements Expressao {
 
@@ -12,5 +12,13 @@ public class RaizQuadrada implements Expressao {
 	public int avalia() {
 		return (int) Math.sqrt(expressao.avalia());
 	}
+	
+	public Expressao getExpressao() {
+		return expressao;
+	}
 
+	@Override
+	public void aceita(Visitor impressora) {
+		impressora.visitaRaizQuadrada(this);
+	}
 }

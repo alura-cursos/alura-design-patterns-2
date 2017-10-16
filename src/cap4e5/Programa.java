@@ -1,4 +1,4 @@
-package cap4;
+package cap4e5;
 
 public class Programa {
 	public static void main(String[] args) {	
@@ -9,5 +9,10 @@ public class Programa {
 		int resultado = soma.avalia();
 		
 		System.out.println(resultado);
+		
+		Expressao raiz = new RaizQuadrada(new Numero(9));
+		Visitor impressora = new ImpressoraVisitor();
+		soma.aceita(impressora);
 	}
 }
+	

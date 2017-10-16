@@ -1,4 +1,4 @@
-package cap4;
+package cap4e5;
 
 public class Multiplicacao implements Expressao {
 
@@ -15,5 +15,18 @@ public class Multiplicacao implements Expressao {
 		int resultadoDaEsquerda = esquerda.avalia();
 		int resultadoDaDireita = direita.avalia();
 		return resultadoDaEsquerda * resultadoDaDireita;
+	}
+	
+	public Expressao getEsquerda() {
+		return esquerda;
+	}
+
+	public Expressao getDireita() {
+		return direita;
+	}
+
+	@Override
+	public void aceita(Visitor impressora) {
+		impressora.visitaMultiplicacao(this);
 	}
 }
