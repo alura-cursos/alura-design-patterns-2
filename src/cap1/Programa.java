@@ -9,5 +9,6 @@ public class Programa {
 		Connection c = new ConnectionFactory().getConnection();
 		
 		PreparedStatement ps = c.prepareStatement("select * from tabela");
+		// ...
 	}
 }
